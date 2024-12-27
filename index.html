@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Баланс</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 bg-dark text-white vh-100">
+                <ul class="nav flex-column pt-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="#">Баланс</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./incomes.html">Доходы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./expenses.html">Расходы</a>
+                    </li>
+
+                </ul>
+            </nav>
+            <main class="col-md-10">
+                <div class="p-4">
+                    <h2>Баланс</h2>
+
+                    <!-- Форма фильтрации -->
+                    <form id="filter-form" class="mb-4">
+                        <div>
+                            <label for="start-date">Начальная дата:</label>
+                            <input type="date" id="start-date" required>
+                        </div>
+                        <div>
+                            <label for="end-date">Конечная дата:</label>
+                            <input type="date" id="end-date" required>
+                        </div>
+                        <button type="submit">Применить фильтр</button>
+                    </form>
+
+                    <canvas id="balanceChart" width="100%" height="40"></canvas>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./main.js"></script>
+
+</body>
+
+</html>
