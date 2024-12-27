@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расходы</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 bg-dark text-white vh-100">
+                <ul class="nav flex-column pt-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./index.html">Баланс</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="./incomes.html">Доходы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Расходы</a>
+                    </li>
+
+                </ul>
+            </nav>
+            <main class="col-md-10">
+                <div class="p-4">
+                    <h2>Расходы</h2>
+                    <table class="table" id="expenses-table">
+                        <thead>
+                            <tr>
+                                <th>Источник расхода</th>
+                                <th>Категория</th>
+                                <th>Сумма</th>
+                                <th>Дата</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+                    <form id="filter-form" class="mb-4">
+                        <div>
+                            <label for="start-date">Начальная дата:</label>
+                            <input type="date" id="start-date" required>
+                        </div>
+                        <div>
+                            <label for="end-date">Конечная дата:</label>
+                            <input type="date" id="end-date" required>
+                        </div>
+                        <button type="submit">Применить фильтр</button>
+                    </form>
+                    <form id="add-expense-form" method="post">
+                        <input id="add-expense" type="text" placeholder="Наименование" required>
+                        <input id="add-type" type="text" placeholder="Тип" required>
+                        <input id="add-value" type="number" placeholder="Сумма" required>
+                        <input id="add-date" type="text" placeholder="Дата" required>
+                        <button type="submit">Добавить</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script type="module" src="./expenses.js"></script>
+
+</body>
+
+</html>

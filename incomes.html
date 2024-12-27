@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доходы</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 bg-dark text-white vh-100">
+                <ul class="nav flex-column pt-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./index.html">Баланс</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="#">Доходы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./expenses.html">Расходы</a>
+                    </li>
+
+                </ul>
+            </nav>
+            <!-- Main Content -->
+            <main class="col-md-10">
+                <div class="p-4">
+                    <h2>Доходы</h2>
+                    <table class="table" id="incomes-table">
+                        <thead>
+                            <tr>
+                                <th>Источник дохода</th>
+                                <th>Категория</th>
+                                <th>Сумма</th>
+                                <th>Дата</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+                    <form id="filter-form" class="mb-4">
+                        <div>
+                            <label for="start-date">Начальная дата:</label>
+                            <input type="date" id="start-date" required>
+                        </div>
+                        <div>
+                            <label for="end-date">Конечная дата:</label>
+                            <input type="date" id="end-date" required>
+                        </div>
+                        <button type="submit">Применить фильтр</button>
+                    </form>
+                    <!-- <button class="btn btn-primary" id="add-income-button">Добавить доход</button> -->
+                    <form id="add-income-form" method="post">
+                        <input id="add-income" type="text" placeholder="Доход" required>
+                        <input id="add-type" type="text" placeholder="Тип" required>
+                        <input id="add-value" type="number" placeholder="Сумма" required>
+                        <input id="add-date" type="text" placeholder="Дата" required>
+                        <button type="submit">Добавить</button>
+                    </form>
+
+                </div>
+            </main>
+        </div>
+    </div>
+    <script type="module" src="./incomes.js"></script>
+
+</body>
+
+</html>
